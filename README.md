@@ -20,7 +20,8 @@ docker run -it -p 5000:5000 -d sentiment_prediction:latest
 
 ### Invoked via URL
 Add sentence and model to URL. Results then displayed.
+```
 http://localhost:5000/predict_page/<sentence>/<model>
-
+```
 ### Invoked via Script (JSON)
 Use request_sentiment.py
