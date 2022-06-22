@@ -1,0 +1,77 @@
+Sentiment within text is directed towards a product
+- We are not just looking for general sentiment analysis
+- We can identify areas of interest regarding the product e.g. battery life
+- Skip-gram to find associated information to products (Try BERT / GPT?)
+
+>> REMINDER: Informal language and colloquial terms are not your friend. They do not play by the rules and you will suffer the consequences if you trust lemming and stemming.
+- Nuance in tweets -> Specific use of punctuation and language that should be considered
+- Test using cleaned data with and without stopwords - degredation??
+
+
+## Read in data
+### Make sure all in the right columns
+
+## Clean data
+### Recode response variable - Binary or multiclass?
+### Tokenisation, lemming, stemming etc.
+### Remove stop words and punct (Noise reductions)(Dimensionality reduction)
+### Remove singular use words? (Dimensionality reduction)
+### NER remove tweet references (PII extracted - mentions & links neutralised)
+### Spelling corrections (?)(which alg.?)
+### Remove emails, website links etc. (regex?)
+### Convert to lowercase <- must be done after dep. parsing and NER
+### Remove anything between curly or square brackets (?)
+### Do we have emoticons in the data? Remove or process?
+### Sarcasm - Can we/ should we do detection?
+### Subjective / objective tones? (Is there even enough data for this?)
+### Collocations, bigrams and trigrams (Can we ensemble these? Much point?)
+
+## Training
+### Can do two ways depending on the intended outcome e.g. How it will be used
+### Example, are we trying to identify areas of high sentiment or interest? Are we just interested in knowing the sentiment of each tweet?
+### Binary response variable would outline tweets of polarity
+### Multiclass would provide an accurate representation of the sentiment
+
+## Modelling
+### spaCy? 
+### tfidf vectoriser -- What version of tfidf to use? (normalised?)
+## Composite / ensemble model? -- Can use a variety of inputs to improve sentiment score.
+
+## Validation
+### Performance against unseen datasets
+### Comparison against pretrained models (TextBlob)
+### Scoring metrics?
+
+
+
+
+## Further work:
+- Undersample & Oversample data
+- Establish binary & 
+
+
+
+Sources:
+>> For modelling using spaCy & scikit learn
+https://www.section.io/engineering-education/sentiment-analysis-with-spacy-and-scikit-learn/#custom-transformer-class
+https://stackoverflow.com/questions/45196312/spacy-and-scikit-learn-vectorizer
+
+>> For pipeline set up
+https://github.com/merb92/Twitter-Sentiment-Analysis/blob/master/notebooks/03_baseline_model.ipynb
+
+>> For preprocessing tweets
+https://medium.com/analytics-vidhya/pre-processing-tweets-for-sentiment-analysis-a74deda9993e1
+https://github.com/merb92/Twitter-Sentiment-Analysis
+
+>> For processing emoticons
+https://medium.com/geekculture/text-preprocessing-how-to-handle-emoji-emoticon-641bbfa6e9e7
+
+>> For stopword removal using NTLK (Since we were relying heavily on the library anyway)
+https://www.geeksforgeeks.org/removing-stop-words-nltk-python/
+
+>> For lemmatization
+https://stackoverflow.com/questions/15586721/wordnet-lemmatization-and-pos-tagging-in-python
+
+>> For Flask & Docker
+https://blog.logrocket.com/build-deploy-flask-app-using-docker/
+https://stackoverflow.com/questions/20001229/how-to-get-posted-json-in-flask

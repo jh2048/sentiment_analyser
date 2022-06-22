@@ -1,0 +1,8 @@
+                  precision    recall  f1-score   support
+
+Negative emotion       0.67      0.40      0.50        99
+Positive emotion       0.91      0.97      0.94       611
+
+        accuracy                           0.89       710
+       macro avg       0.79      0.69      0.72       710
+    weighted avg       0.88      0.89      0.88       710

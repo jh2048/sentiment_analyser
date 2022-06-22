@@ -1,0 +1,9 @@
+                                    precision    recall  f1-score   support
+
+                  Negative emotion       0.36      0.16      0.22       111
+No emotion toward brand or product       0.72      0.78      0.75      1093
+                  Positive emotion       0.55      0.53      0.54       584
+
+                          accuracy                           0.66      1788
+                         macro avg       0.54      0.49      0.50      1788
+                      weighted avg       0.64      0.66      0.65      1788
